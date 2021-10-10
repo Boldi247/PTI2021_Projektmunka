@@ -36,21 +36,22 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadIntersectionEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDNotification.cs" />
+     <Compile Include="Assets\LowPolyWater_Pack\Scripts\Editor\GeneratePlane.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDSplineFEditor.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadSystemEditor.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDSplineIEditor.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDWizard.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDEditorProgressWindow.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDTerrainEditor.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDWizard.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDObjExporter.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDSplineIEditor.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDSplineCEditor.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDHelpWindow.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDNotification.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDSaveWindow.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDSplineNEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadIntersectionEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDTerrainEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadSystemEditor.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDSaveWindow.cs" />
      <Compile Include="Assets\RoadArchitect\Editor\GSDRoadSystemEditorMenu.cs" />
-     <Compile Include="Assets\RoadArchitect\Editor\GSDObjExporter.cs" />
+     <Compile Include="Assets\RoadArchitect\Editor\GSDRoadEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Programs/Unity/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -645,47 +646,59 @@
     <Reference Include="System.Xml.XPath.XDocument">
         <HintPath>D:/Programs/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>D:/Programs/Unity/Files - Savings/PolyRace/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{b7236c57-f6a2-9108-bc0f-448ad7f3d7b2}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{5a60aeac-0d75-cbe4-4ccd-c75acce4943e}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{a365f72b-8988-99e2-93be-a1a97ee2fcfb}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{7ebbeaf6-42cc-6008-40e2-992d253388ff}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{fb8725a8-4ab5-d897-b7d1-70441ead851b}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{03674077-6f46-4164-d96d-fd60e71e5a8b}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{b2ef8cb5-eda3-a285-49a8-c8144078f857}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{4dfddef8-fbe5-0ed5-875c-1a1f38cf38d7}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{271774b7-6ffa-2bc2-8d13-8e1867fa4049}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{3e421b89-b8b8-289c-2668-e26a91a8da79}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{ec23e36b-1980-2683-e6c6-e872ade0e53e}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{8e2848ca-a347-8096-3af7-bddc5deb5c93}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{6e170d1f-8bd5-478b-d185-8d1a6de2f540}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
