@@ -7,7 +7,12 @@ public class CheckpointManager : MonoBehaviour
     public Rigidbody Car;
     Vector3 CHPoint_position;
     Vector3 CHPoint_rotation;
+
+    public ControlCar movement;
+
     private void Start() {        
+        movement.enabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
+        
         CHPoint_position = gameObject.transform.position;
         
         float xrot = transform.eulerAngles.x;
@@ -28,6 +33,21 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "CollidableObject"){
+            CollidingWithObjects();
+        }
+    }
+
+    private void CollidingWithObjects()
+    {
+        /*...mozgato script kikapcsolasa
+        kamera hatrebb es felulrebb tolasa
+        slowmo...*/
+        movement.enabled = false;
+        Invoke("PlaceOnCheckpoint", 2.0f);
+    }
+
     private void RegisterCheckPoint()
     {
         CHPoint_position = gameObject.transform.position;
@@ -42,8 +62,10 @@ public class CheckpointManager : MonoBehaviour
         CHPoint_rotation.z = zrot;
     }
 
-    private void PlaceOnCheckpoint()
+    public void PlaceOnCheckpoint() /*public az invoke miatt*/
     {
+        if (movement.enabled == false) movement.enabled = true;
+
         Car.velocity = Vector3.zero;
         gameObject.transform.position = CHPoint_position;
         gameObject.transform.eulerAngles = CHPoint_rotation;

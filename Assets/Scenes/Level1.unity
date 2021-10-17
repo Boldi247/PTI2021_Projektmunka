@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.5647059, g: 0.6745098, b: 0.7686275, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.005
+  m_FogDensity: 0.002
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -15068,7 +15068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &693573628
 MonoBehaviour:
@@ -17882,6 +17882,10 @@ PrefabInstance:
     - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_Name
       value: sptp_bench_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 498102, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_RootOrder
@@ -21380,6 +21384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sptp_dumpster_01
       objectReference: {fileID: 0}
+    - target: {fileID: 103018, guid: 8aed0f8fb93c2ed4c96a99dcc130b90d, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 401076, guid: 8aed0f8fb93c2ed4c96a99dcc130b90d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -22379,6 +22387,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+--- !u!1 &1024812445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024812449}
+  - component: {fileID: 1024812448}
+  - component: {fileID: 1024812447}
+  - component: {fileID: 1024812446}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1024812446
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024812445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1024812447
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024812445}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b686b478ae678de4f8d2dfcd0716a305, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1024812448
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024812445}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1024812449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024812445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 318.2, y: 17.8, z: 360.6}
+  m_LocalScale: {x: 600, y: 1, z: 600}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027378593
 GameObject:
   m_ObjectHideFlags: 0
@@ -28413,7 +28517,7 @@ Transform:
   - {fileID: 583669022}
   - {fileID: 2146612205}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1147437397
 PrefabInstance:
@@ -29188,6 +29292,10 @@ PrefabInstance:
     - target: {fileID: 123838, guid: 8be6a5c88ef3420449ea4b8e6df23556, type: 3}
       propertyPath: m_Name
       value: sptp_mail_box_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 123838, guid: 8be6a5c88ef3420449ea4b8e6df23556, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 485622, guid: 8be6a5c88ef3420449ea4b8e6df23556, type: 3}
       propertyPath: m_RootOrder
@@ -38056,6 +38164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sptp_dumpster_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 103018, guid: 8aed0f8fb93c2ed4c96a99dcc130b90d, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 401076, guid: 8aed0f8fb93c2ed4c96a99dcc130b90d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -38905,6 +39017,10 @@ PrefabInstance:
     - target: {fileID: 148458, guid: 7f9ea44d759da6b4e995d9fa92373629, type: 3}
       propertyPath: m_Name
       value: sptp_traffic_light_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 148458, guid: 7f9ea44d759da6b4e995d9fa92373629, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 444314, guid: 7f9ea44d759da6b4e995d9fa92373629, type: 3}
       propertyPath: m_RootOrder
@@ -43802,6 +43918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sptp_street_light_01
       objectReference: {fileID: 0}
+    - target: {fileID: 107906, guid: 2cc5e9c8613078b47b47bdcf3dc32ae2, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 489306, guid: 2cc5e9c8613078b47b47bdcf3dc32ae2, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -44339,6 +44459,10 @@ PrefabInstance:
     - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_Name
       value: sptp_bench_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 498102, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_RootOrder
@@ -45125,6 +45249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sptp_street_light_02
       objectReference: {fileID: 0}
+    - target: {fileID: 140358, guid: 0401a3f0164b9cf40bd8c14f152e69ab, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 490890, guid: 0401a3f0164b9cf40bd8c14f152e69ab, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -45617,6 +45745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sptp_bin_02
       objectReference: {fileID: 0}
+    - target: {fileID: 112360, guid: 70ea0ba299bdf0a49a2af90f19b23cca, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 466690, guid: 70ea0ba299bdf0a49a2af90f19b23cca, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -45863,6 +45995,10 @@ PrefabInstance:
     - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_Name
       value: sptp_bench_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 155992, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 498102, guid: 4000718aa726f174bb2a1e64ee9190cb, type: 3}
       propertyPath: m_RootOrder
@@ -46383,6 +46519,10 @@ PrefabInstance:
     - target: {fileID: 122426, guid: afcb5e8f2ed7ce44ebcb9f16d41ffe1c, type: 3}
       propertyPath: m_Name
       value: sptp_billboard_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 122426, guid: afcb5e8f2ed7ce44ebcb9f16d41ffe1c, type: 3}
+      propertyPath: m_TagString
+      value: CollidableObject
       objectReference: {fileID: 0}
     - target: {fileID: 489922, guid: afcb5e8f2ed7ce44ebcb9f16d41ffe1c, type: 3}
       propertyPath: m_RootOrder
@@ -51579,6 +51719,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+--- !u!1 &2145574742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145574745}
+  - component: {fileID: 2145574744}
+  - component: {fileID: 2145574743}
+  m_Layer: 0
+  m_Name: Terrain (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &2145574743
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145574742}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 6cb092ec30e203a4d8ca4723d84541d4, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &2145574744
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145574742}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 6cb092ec30e203a4d8ca4723d84541d4, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 8117257172b08b6469df36b97b026f76, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!4 &2145574745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145574742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -58, z: -718.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146612204
 GameObject:
   m_ObjectHideFlags: 0
@@ -51732,7 +51948,6 @@ GameObject:
   - component: {fileID: 7781901043587084016}
   - component: {fileID: 579525754390293476}
   - component: {fileID: 579525754390293475}
-  - component: {fileID: 579525754390293477}
   - component: {fileID: 579525754390293478}
   m_Layer: 0
   m_Name: Free_Racing_Car_Carbon
@@ -51779,19 +51994,6 @@ MonoBehaviour:
   frontRightWheeTransform: {fileID: 3594335350300039095}
   rearLeftWheelTransform: {fileID: 5993471134057975636}
   rearRightWheelTransform: {fileID: 7305154732002518999}
---- !u!114 &579525754390293477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579525754390293474}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5e5972b984d734485b1c0d986f2f9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carRB: {fileID: 7781901043587084016}
 --- !u!114 &579525754390293478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51806,6 +52008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CHPoint: {fileID: 893666532}
   Car: {fileID: 7781901043587084016}
+  movement: {fileID: 579525754390293476}
 --- !u!1001 &638127877398885784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51988,7 +52191,7 @@ GameObject:
   - component: {fileID: 2986159634057613398}
   m_Layer: 0
   m_Name: Free_Racing_Car_Blue
-  m_TagString: Untagged
+  m_TagString: CollidableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
