@@ -27,4 +27,18 @@ public class CameraFollow : MonoBehaviour
         var rotation = Quaternion.LookRotation(direction, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
+
+    public void ZoomOut()
+    {
+        translateSpeed = 1;
+        offset.y = 6;
+        offset.z = -10;
+    }
+
+    public void ZoomIn()
+    {
+        translateSpeed = 10;       
+        offset.y = 2.09f;
+        offset.z = -5.32f;
+    }
 }

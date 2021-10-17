@@ -52009,6 +52009,7 @@ MonoBehaviour:
   CHPoint: {fileID: 893666532}
   Car: {fileID: 7781901043587084016}
   movement: {fileID: 579525754390293476}
+  cameraSet: {fileID: 963194229}
 --- !u!1001 &638127877398885784
 PrefabInstance:
   m_ObjectHideFlags: 0

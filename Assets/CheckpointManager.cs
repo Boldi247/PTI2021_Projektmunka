@@ -9,6 +9,7 @@ public class CheckpointManager : MonoBehaviour
     Vector3 CHPoint_rotation;
 
     public ControlCar movement;
+    public CameraFollow cameraSet; //kamera hatrebbtolasa
 
     private void Start() {        
         movement.enabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
@@ -45,13 +46,15 @@ public class CheckpointManager : MonoBehaviour
         kamera hatrebb es felulrebb tolasa
         slowmo...*/
         movement.enabled = false;
+
+        cameraSet.ZoomOut();
+
         Invoke("PlaceOnCheckpoint", 2.0f);
     }
 
     private void RegisterCheckPoint()
     {
         CHPoint_position = gameObject.transform.position;
-        //CHPoint_position.y = CHPoint_position.x + 1.5f;
         
         float xrot = transform.eulerAngles.x;
         float yrot = transform.eulerAngles.y;
@@ -64,6 +67,8 @@ public class CheckpointManager : MonoBehaviour
 
     public void PlaceOnCheckpoint() /*public az invoke miatt*/
     {
+        cameraSet.ZoomIn();
+
         if (movement.enabled == false) movement.enabled = true;
 
         Car.velocity = Vector3.zero;
