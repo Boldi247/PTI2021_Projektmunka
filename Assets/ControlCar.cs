@@ -31,8 +31,13 @@ public class ControlCar : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    public float carSpeed;
+    public float carMaxSpeed = 100;
+
+    public static ControlCar cc;
 
     private void Start() {
+        cc = this;
         rb.centerOfMass = new Vector3(0, Try, 0);
     }
 
@@ -43,8 +48,9 @@ public class ControlCar : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
-    }
 
+        carSpeed = (rb.velocity.magnitude * 3.6f)/carMaxSpeed;
+    }
 
     private void GetInput()
     {

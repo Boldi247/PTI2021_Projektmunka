@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\ControlCar.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadMeshSplinate.cs" />
+     <Compile Include="Assets\CheckpointManager.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadUtilityT.cs" />
      <Compile Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadAutomation.cs" />
@@ -63,7 +64,7 @@
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineI.cs" />
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineC.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadIntersection.cs" />
-     <Compile Include="Assets\CheckpointManager.cs" />
+     <Compile Include="Assets\CarSounds.cs" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDShoulderDirtDX11.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDStandardTiling.shader" />
@@ -76,11 +77,13 @@
      <None Include="Assets\RoadArchitect\Shaders\GSDTransparentWithShadows.shader" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Car Engine Sounds - i6 German Free\Assets for Realistic Engine Sounds\ReadMe.txt" />
      <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDRoadShaderLow.shader" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
+     <None Include="Assets\Car Engine Sounds - i6 German Free\Demo_Audio\ReadMe.txt" />
      <None Include="Assets\RoadArchitect\Shaders\GSDTransparentWithShadowsZ.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDRoadShader.shader" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />

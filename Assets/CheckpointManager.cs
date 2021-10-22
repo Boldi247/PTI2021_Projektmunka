@@ -11,6 +11,8 @@ public class CheckpointManager : MonoBehaviour
     public ControlCar movement;
     public CameraFollow cameraSet; //kamera hatrebbtolasa
 
+    private bool isCollided;
+
     private void Start() {        
         movement.enabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
         
@@ -25,6 +27,13 @@ public class CheckpointManager : MonoBehaviour
         CHPoint_rotation.z = zrot;
     }
 
+    private void Update() {
+        if (Input.GetKey(KeyCode.R) && !isCollided)
+        {
+            CollidingWithObjects();
+        }
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "RoadBlock"){
             PlaceOnCheckpoint();
@@ -35,16 +44,15 @@ public class CheckpointManager : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "CollidableObject"){
+        if (other.gameObject.tag == "CollidableObject" && !isCollided){
             CollidingWithObjects();
         }
     }
 
     private void CollidingWithObjects()
     {
-        /*...mozgato script kikapcsolasa
-        kamera hatrebb es felulrebb tolasa
-        slowmo...*/
+        isCollided = true;
+
         movement.enabled = false;
 
         cameraSet.ZoomOut();
@@ -67,9 +75,11 @@ public class CheckpointManager : MonoBehaviour
 
     public void PlaceOnCheckpoint() /*public az invoke miatt*/
     {
+        isCollided = false;
+
         cameraSet.ZoomIn();
 
-        if (movement.enabled == false) movement.enabled = true;
+        if (!movement.enabled) movement.enabled = true;
 
         Car.velocity = Vector3.zero;
         gameObject.transform.position = CHPoint_position;
