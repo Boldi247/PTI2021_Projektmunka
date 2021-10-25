@@ -47,6 +47,7 @@ public class CheckpointManager : MonoBehaviour
         if (other.gameObject.tag == "CollidableObject" && !isCollided){
             CollidingWithObjects();
         }
+        FindObjectOfType<AudioManager>().Play("Crash");
     }
 
     private void CollidingWithObjects()
