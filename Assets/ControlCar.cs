@@ -13,6 +13,7 @@ public class ControlCar : MonoBehaviour
     private float currentSteerAngle;
     private float currentbreakForce;
     private bool isBreaking;
+    public bool movementEnabled;
 
     [SerializeField] private float Try = -0.9f;
     public Rigidbody rb;
@@ -39,16 +40,21 @@ public class ControlCar : MonoBehaviour
     private void Start() {
         cc = this;
         rb.centerOfMass = new Vector3(0, Try, 0);
+        movementEnabled = true;
     }
 
 
     private void FixedUpdate()
     {
-        GetInput();
+        if (movementEnabled){
+            GetInput();
+        }
+        
         HandleMotor();
         HandleSteering();
         UpdateWheels();
 
+        //----GYORSASÁG KIMENTÉSE----
         carSpeed = (rb.velocity.magnitude * 3.6f)/carMaxSpeed;
     }
 

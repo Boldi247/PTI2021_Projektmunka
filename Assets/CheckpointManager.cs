@@ -13,9 +13,9 @@ public class CheckpointManager : MonoBehaviour
 
     private bool isCollided;
 
-    private void Start() {        
-        movement.enabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
-        
+    private void Start() {    
+        ControlCar.cc.movementEnabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
+
         CHPoint_position = gameObject.transform.position;
         
         float xrot = transform.eulerAngles.x;
@@ -54,7 +54,7 @@ public class CheckpointManager : MonoBehaviour
     {
         isCollided = true;
 
-        movement.enabled = false;
+        ControlCar.cc.movementEnabled = false;
 
         cameraSet.ZoomOut();
 
@@ -80,7 +80,7 @@ public class CheckpointManager : MonoBehaviour
 
         cameraSet.ZoomIn();
 
-        if (!movement.enabled) movement.enabled = true;
+        if (!ControlCar.cc.movementEnabled) ControlCar.cc.movementEnabled = true;
 
         Car.velocity = Vector3.zero;
         gameObject.transform.position = CHPoint_position;
