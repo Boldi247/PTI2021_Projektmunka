@@ -10,6 +10,7 @@ public class CheckpointManager : MonoBehaviour
 
     public ControlCar movement;
     public CameraFollow cameraSet; //kamera hatrebbtolasa
+    public GameObject CompleteLevelUI;
 
     private bool isCollided;
 
@@ -41,6 +42,9 @@ public class CheckpointManager : MonoBehaviour
         if (other.gameObject.tag == "CheckPoint"){
             RegisterCheckPoint();
         }
+        if (other.gameObject.tag == "End"){
+            CompleteLevel();
+        }
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -59,6 +63,10 @@ public class CheckpointManager : MonoBehaviour
         cameraSet.ZoomOut();
 
         Invoke("PlaceOnCheckpoint", 2.0f);
+    }
+
+    private void CompleteLevel(){
+        CompleteLevelUI.SetActive(true);
     }
 
     private void RegisterCheckPoint()

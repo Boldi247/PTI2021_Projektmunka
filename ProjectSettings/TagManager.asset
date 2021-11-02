@@ -7,6 +7,7 @@ TagManager:
   - RoadBlock
   - CheckPoint
   - CollidableObject
+  - End
   layers:
   - Default
   - TransparentFX
