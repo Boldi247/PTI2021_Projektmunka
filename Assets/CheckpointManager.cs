@@ -11,10 +11,13 @@ public class CheckpointManager : MonoBehaviour
     public ControlCar movement;
     public CameraFollow cameraSet; //kamera hatrebbtolasa
     public GameObject CompleteLevelUI;
+    public GameObject StartupFade;
 
     private bool isCollided;
 
-    private void Start() {    
+    private void Start() {
+        FadeAnimation();
+
         ControlCar.cc.movementEnabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
 
         CHPoint_position = gameObject.transform.position;
@@ -63,6 +66,10 @@ public class CheckpointManager : MonoBehaviour
         cameraSet.ZoomOut();
 
         Invoke("PlaceOnCheckpoint", 2.0f);
+    }
+
+    private void FadeAnimation(){
+        StartupFade.SetActive(true);
     }
 
     private void CompleteLevel(){

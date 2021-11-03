@@ -68,6 +68,7 @@
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineI.cs" />
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineC.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadIntersection.cs" />
+     <Compile Include="Assets\LevelComplete.cs" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDShoulderDirtDX11.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDStandardTiling.shader" />
