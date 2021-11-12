@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
     
 public class CheckpointManager : MonoBehaviour
-{
+{   
+    public static CheckpointManager cm;
     public Transform CHPoint;
     public Rigidbody Car;
     Vector3 CHPoint_position;
@@ -12,11 +13,15 @@ public class CheckpointManager : MonoBehaviour
     public CameraFollow cameraSet; //kamera hatrebbtolasa
     public GameObject CompleteLevelUI;
     public GameObject StartupFade;
+    public GameObject RemainingRestartsUI;
 
     private bool isCollided;
+    public int allowed_restarts;
 
     private void Start() {
         FadeAnimation();
+
+        allowed_restarts = 3;
 
         ControlCar.cc.movementEnabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
 
@@ -32,10 +37,18 @@ public class CheckpointManager : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKey(KeyCode.R) && !isCollided)
-        {
+        if (Input.GetKey(KeyCode.R) && !isCollided && allowed_restarts > 0){
             CollidingWithObjects();
+            allowed_restarts--;
         }
+        else if (Input.GetKey(KeyCode.R) && !isCollided && allowed_restarts == 0){
+            RemainingRestartsUI.SetActive(true);
+            Invoke("SetRestartUIFalse", 5f);
+        }
+    }
+
+    private void SetRestartUIFalse(){
+        RemainingRestartsUI.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other) {

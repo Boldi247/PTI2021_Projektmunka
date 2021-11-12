@@ -42,6 +42,7 @@
      <Compile Include="Assets\CheckpointManager.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadUtilityT.cs" />
      <Compile Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
+     <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadAutomation.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadUtilityEditor.cs" />
      <Compile Include="Assets\Audio Scripts\AudioManager.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\RoadArchitect\GSDRoad.cs" />
      <Compile Include="Assets\RoadArchitect\GSDTerrain.cs" />
      <Compile Include="Assets\RoadArchitect\GSDTrafficLightController.cs" />
+     <Compile Include="Assets\CreditsScript.cs" />
      <Compile Include="Assets\Chpoints.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadEdgeObjects.cs" />
      <Compile Include="Assets\Barrier Pack\Scripts\ContrastStretch.cs" />
@@ -69,6 +71,8 @@
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineI.cs" />
      <Compile Include="Assets\RoadArchitect\Spline\GSDSplineC.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadIntersection.cs" />
+     <Compile Include="Assets\Countdown.cs" />
+     <Compile Include="Assets\BackgroundAudio.cs" />
      <None Include="Assets\SimplePoly - Town Pack\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDShoulderDirtDX11.shader" />
      <None Include="Assets\RoadArchitect\Shaders\GSDStandardTiling.shader" />
