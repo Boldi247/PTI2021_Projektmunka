@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BACK TO GAME MENU
+  m_Text: GO TO LEVEL SELECTOR
 --- !u!222 &137724734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1601825499}
         m_TargetAssemblyTypeName: CreditsScript, Assembly-CSharp
-        m_MethodName: GoToMenu
+        m_MethodName: GoToLevelSelector
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -547,8 +547,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1601825500}
-          m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
-          m_MethodName: PlayHoverSound
+          m_TargetAssemblyTypeName: ButtonAudioPlayer, Assembly-CSharp
+          m_MethodName: PlayHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -563,8 +563,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1601825500}
-          m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
-          m_MethodName: PlayClickSound
+          m_TargetAssemblyTypeName: ButtonAudioPlayer, Assembly-CSharp
+          m_MethodName: PlayClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -805,8 +805,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1601825500}
-          m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
-          m_MethodName: PlayHoverSound
+          m_TargetAssemblyTypeName: ButtonAudioPlayer, Assembly-CSharp
+          m_MethodName: PlayHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -821,8 +821,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1601825500}
-          m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
-          m_MethodName: PlayClickSound
+          m_TargetAssemblyTypeName: ButtonAudioPlayer, Assembly-CSharp
+          m_MethodName: PlayClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1014,12 +1014,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1601825495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06905150316dbbc4a9ac01d7a5306066, type: 3}
+  m_Script: {fileID: 11500000, guid: 8128e3b455823474486aee831fd2a817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonAudios: {fileID: 1601825501}
-  buttonHover: {fileID: 8300000, guid: 24dae00ae47844d449486fa07f18e69a, type: 3}
-  buttonClick: {fileID: 8300000, guid: bb053abb44f279b44991e13c748e03b2, type: 3}
+  audios: {fileID: 1601825501}
+  hover: {fileID: 8300000, guid: 24dae00ae47844d449486fa07f18e69a, type: 3}
+  click: {fileID: 8300000, guid: bb053abb44f279b44991e13c748e03b2, type: 3}
 --- !u!82 &1601825501
 AudioSource:
   m_ObjectHideFlags: 0

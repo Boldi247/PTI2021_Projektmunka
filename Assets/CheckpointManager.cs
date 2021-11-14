@@ -23,8 +23,6 @@ public class CheckpointManager : MonoBehaviour
 
         allowed_restarts = 3;
 
-        ControlCar.cc.movementEnabled = true; /*kezdesnel mindenkepp fusson a mozgato script*/
-
         CHPoint_position = gameObject.transform.position;
         
         float xrot = transform.eulerAngles.x;

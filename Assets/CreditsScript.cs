@@ -10,7 +10,7 @@ public class CreditsScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void GoToMenu(){
-        SceneManager.LoadScene(0);
+    public void GoToLevelSelector(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
